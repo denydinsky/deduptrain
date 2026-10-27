@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "denydinsky-deduptrain"
+version = "0.1.0"
+description = "用指纹与近重复算法标记重复组，标出被覆盖的样本"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "denydinsky" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://denydinsky.github.io"
+Repository = "https://github.com/denydinsky/deduptrain"
+Issues = "https://github.com/denydinsky/deduptrain/issues"
+
+[project.scripts]
+deduptrain = "deduptrain:main"
+
+[tool.setuptools]
+py-modules = ["deduptrain"]
